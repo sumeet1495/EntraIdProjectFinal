@@ -1,0 +1,7 @@
+# Ignore Visual Studio related files
+.vs/
+bin/
+obj/
+
+# Ignore appsettings containing secrets
+appsettings.json
