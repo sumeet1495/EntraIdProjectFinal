@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using Azure.Identity;
 using Microsoft.Graph;
 using Microsoft.Extensions.Configuration;
+using EntraIdFetcher.Interfaces;
+using Microsoft.Graph.Models.ExternalConnectors;
 
-namespace EntraIdFetcherConsole.Helpers
+namespace EntraIdFetcher.Helpers
 {
-    public class GraphServiceClientProvider
+    public class GraphServiceClientProvider : IGraphAuthProvider
     {
         private readonly IConfiguration _configuration;
 
         public GraphServiceClientProvider(IConfiguration configuration)
         {
             _configuration = configuration;
+
         }
 
         public GraphServiceClient GetGraphServiceClient()

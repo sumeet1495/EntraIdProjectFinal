@@ -8,7 +8,7 @@ namespace EntraIdFetcher.Interfaces
 {
     public interface IUserService
     {
-        //method GetUserDetailsByIdAsync which takes a string user ID and returns user details in asynchronous way
+        //method GetUserDetailsByIdAsync which takes a string object ID and returns user details in asynchronous way
         // return type - return a UserDetailsModel object
         Task<UserDetailsModel> GetUserDetailsByIdAsync(string objectId);
     }

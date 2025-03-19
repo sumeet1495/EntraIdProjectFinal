@@ -16,9 +16,10 @@ namespace EntraIdFetcher.Services
         }
 
         // method to fetch user details based on unique object ID
-        public async Task<UserDetailsModel> GetUserDetailsByIdAsync(string objectId)
+        public async Task<UserDetailsModel> GetUserDetailsByIdAsync(string objectId)   // Example of "I" - Interfaces Segregation
         {
-            var user = await _graphClient.Users[objectId].GetAsync();  // No .Request() required after v5.0 
+            var user = await _graphClient.Users[objectId].GetAsync();  // No .Request() required after v5.0
+           // Console.WriteLine(user);
 
             // mapping response to model 
             return new UserDetailsModel
